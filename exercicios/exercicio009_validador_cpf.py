@@ -62,5 +62,8 @@ while True:
     condicao_1 = (digito_11 <= 9)
     digito_11 = digito_11 if condicao_1 else 0
 
-    print(digito_10, digito_11)
+    if digito_10 == lista_cpf[9] and digito_11 == lista_cpf[10]:
+        print('PARABÉNS! Seu CPF é válido.')
+    else:
+        print('Oh no! Parece que você digitou um CPF inválido.')
     break
