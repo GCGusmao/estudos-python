@@ -20,3 +20,47 @@ contrário disso:
     resultado é o valor da conta
 O primeiro dígito do CPF é 7
 """
+lista_cpf = []
+cpf_raw = ''
+contagem_1_digito = 10
+contagem_2_digito = 11
+digito_10 = 0
+digito_11 = 0
+
+while True:
+    cpf_raw = input('Por favor digite seu CPF: ')
+
+    if len(cpf_raw) < 11 or len(cpf_raw) > 14:
+        print('O valor digitado não condiz com um CPF. Favor colocar apenas números, pontos e traços')
+        continue
+
+    for i in cpf_raw:
+        try:
+            i = int(i)
+            lista_cpf.append(i)
+        except ValueError:
+            print('Falha: ', i)
+
+    if not len(lista_cpf) == 11: 
+        print('Ops, encontramos um erro aqui. Você não parece ter digitado SOMENTE números no CPF. Tente novamente')
+        continue
+
+    for j in lista_cpf[:9]:
+        digito_10 += (j * contagem_1_digito)
+        contagem_1_digito -= 1
+        digito_11 += (j * contagem_2_digito)
+        contagem_2_digito -= 1
+
+    digito_10 = digito_10 * 10
+    digito_10 = digito_10 % 11
+    condicao_1 = (digito_10 <= 9)
+    digito_10 = digito_10 if condicao_1 else 0
+
+    digito_11 += (digito_10 * 2)
+    digito_11 = digito_11 * 10
+    digito_11 = digito_11 % 11
+    condicao_1 = (digito_11 <= 9)
+    digito_11 = digito_11 if condicao_1 else 0
+
+    print(digito_10, digito_11)
+    break
