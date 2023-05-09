@@ -39,7 +39,7 @@ while True:
             i = int(i)
             lista_cpf.append(i)
         except ValueError:
-            print('Falha: ', i)
+            print('Caracterie removido: ', i)
 
     if not len(lista_cpf) == 11: 
         print('Ops, encontramos um erro aqui. Você não parece ter digitado SOMENTE números no CPF. Tente novamente')
