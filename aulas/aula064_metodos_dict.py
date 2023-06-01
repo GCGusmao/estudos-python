@@ -25,8 +25,8 @@ print(pessoa['idade'])
 # print(list(pessoa.values()))
 # print(list(pessoa.items()))
 
-# for valor in pessoa.values():
-#     print(valor)
+for valor in pessoa.values():
+     print(valor)
 
 # for chave, valor in pessoa.items():
 #     print(chave, valor)

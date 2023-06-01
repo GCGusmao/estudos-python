@@ -5,9 +5,9 @@ nomes = ['Maria', 'Joao', 'Felipe', 'Ariely']
 for indice, nome in enumerate(nomes):
     print(indice, nome)
 
-# for item in enumerate(lista):
-#     indice, nome = item
-#     print(indice, nome)
+for item in enumerate(nomes):
+     indice, nome = item
+     print(indice, nome)
 
 
 # for tupla_enumerada in enumerate(lista):
