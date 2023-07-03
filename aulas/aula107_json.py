@@ -13,7 +13,7 @@ pessoa = {
     'nada': None,
 }
 
-with open('./aulas/aula117.json', 'w', encoding='utf8') as arquivo:
+with open('./aulas/aula107.json', 'w', encoding='utf8') as arquivo:
     json.dump(
         pessoa,
         arquivo,
@@ -21,7 +21,7 @@ with open('./aulas/aula117.json', 'w', encoding='utf8') as arquivo:
         indent=2,
     )
 
-with open('aula117.json', 'r', encoding='utf8') as arquivo:
+with open('./aulas/aula107.json', 'r', encoding='utf8') as arquivo:
     pessoa = json.load(arquivo)
     print(pessoa)
     # print(type(pessoa))
