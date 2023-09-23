@@ -17,3 +17,5 @@ Repositório para armazenar resumos sobre Git e GitHub do curso Versionamento de
 | git status | Mostra o estado de arquivos staged |
 | git log | Mostra o histórico de commits existentes |
 | git commit -m"MENSAGEM" | Commita os arquivos staged com a mensagem "MENSAGEM" |
+| .gitignore | Contém estrutura para ignorar arquivos ou pastas |
+| .gitkeep | Arquivo vazio para permitir commit de pasta vazia |
