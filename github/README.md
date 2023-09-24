@@ -30,6 +30,7 @@ Repositório para armazenar resumos sobre Git e GitHub do curso Versionamento de
 | git pull | Baixa e mescla as alterações do repositório remoto |
 | git add remote origin https://url-github.com | Adiciona um repositório remoto |
 | git push -u origin main | Upload das alterações para o remoto |
+| git push origin main | Upload das alterações para o remoto |
 | git checkout -b NOMEDABRANCH | Cria uma nova branch a partir do ponteiro autal |
 | git checkout main | Volta o ponteiro para a branch main |
 | git branch -v | Lista os últimos commits das branchs |
