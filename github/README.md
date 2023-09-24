@@ -27,6 +27,16 @@ Repositório para armazenar resumos sobre Git e GitHub do curso Versionamento de
 | git reset --mixed HASH_DO_COMMIT | Restaura a head para um dado commit |
 | git reset --hard HASH_DO_COMMIT | Restaura a head para um dado commit |
 | git reflog | Log mais detalhado do Git |
+| git pull | Baixa e mescla as alterações do repositório remoto |
+| git add remote origin https://url-github.com | Adiciona um repositório remoto |
+| git push -u origin main | Upload das alterações para o remoto |
+| git checkout -b NOMEDABRANCH | Cria uma nova branch a partir do ponteiro autal |
+| git checkout main | Volta o ponteiro para a branch main |
+| git branch -v | Lista os últimos commits das branchs |
+| git branch | Lista as branchs |
+| git branch -d NOMEDABRANCH | Deleta a branch com nome NOMEBRANCH |
+| git merge NOMEBRANCH | vai mesclar a branch com a main |
+|  |  |
 |  |  |
 |  |  |
 |  |  |
