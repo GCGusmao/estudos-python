@@ -15,6 +15,7 @@ Repositório para armazenar resumos sobre Git e GitHub do curso Versionamento de
 | git add FILE_NAME | Adiciona o arquivo ao staged  |
 | git add --all / git add . | Adiciona todos os arquivos para o staged |
 | git add -u | Adiciona em staged apenas arquivos modificados ou excluídos |
+| git reset | Restaura as alterações realizadas pelo ADD. |
 | git status | Mostra o estado de arquivos staged |
 | git log | Mostra o histórico de commits existentes |
 | git commit -m"MENSAGEM" | Commita os arquivos staged com a mensagem "MENSAGEM" |
