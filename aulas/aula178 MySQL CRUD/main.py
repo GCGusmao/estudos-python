@@ -92,7 +92,40 @@ with connection:
             ("Helena", 15, ),
         )
         result = cursor.executemany(sql, data4)
-        print(sql)
-        print(data4)
-        print(result)
+        # print(sql)
+        # print(data4)
+        # print(result)
     connection.commit()
+
+    # Lendo valores do banco de dados
+    with connection.cursor() as cursor:
+        menor_id = int(input('Digite o menor id: '))
+        maior_id = int(input('Digite o maior id: '))
+
+        sql = (
+            f'SELECT * FROM {TABLE_NAME} '
+            'WHERE id BETWEEN %s AND %s  '
+        )
+
+        cursor.execute(sql, (menor_id, maior_id))
+        # mogrify server para verificar qual consulta está sendo feita na base
+        # de dados
+        print(cursor.mogrify(sql, (menor_id, maior_id)))
+
+        data5 = cursor.fetchall()
+
+        # for row in data5:
+        # print(row)
+
+    with connection.cursor() as cursor:
+        sql = (
+            f'DELETE FROM {TABLE_NAME} '
+            'WHERE id = %s '
+        )
+        cursor.execute(sql, (1, ))
+        connection.commit()
+
+        cursor.execute(f'SELECT * FROM {TABLE_NAME} ')
+
+        for row in cursor.fetchall():
+            print(row)
