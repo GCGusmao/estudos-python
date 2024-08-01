@@ -117,12 +117,29 @@ with connection:
         # for row in data5:
         # print(row)
 
+    # Excluíndo registros SQL
     with connection.cursor() as cursor:
         sql = (
             f'DELETE FROM {TABLE_NAME} '
             'WHERE id = %s '
         )
         cursor.execute(sql, (1, ))
+        connection.commit()
+
+        cursor.execute(f'SELECT * FROM {TABLE_NAME} ')
+
+        # for row in cursor.fetchall():
+        # print(row)
+
+    # Editanto registros SQL
+
+    with connection.cursor() as cursor:
+        sql = (
+            f'UPDATE {TABLE_NAME} '
+            'SET nome = %s, idade = %s '
+            'WHERE id = %s'
+        )
+        cursor.execute(sql, ('Eleanor', 102, 4))
         connection.commit()
 
         cursor.execute(f'SELECT * FROM {TABLE_NAME} ')
